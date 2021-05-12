@@ -1,24 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ePark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eMail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHJ-0Q-w6d">
+                                <rect key="frame" x="52" y="172" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1e7-UX-UQe">
+                                <rect key="frame" x="52" y="240" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-3X-fOJ">
+                                <rect key="frame" x="85" y="311" width="32" height="30"/>
+                                <state key="normal" title="Giriş"/>
+                                <connections>
+                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coe-ok-Pss"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ial-G8-JMH">
+                                <rect key="frame" x="282" y="311" width="51" height="30"/>
+                                <state key="normal" title="Kayıt ol"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2b-RU-cyg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edY-LY-Rhi">
+                                <rect key="frame" x="87" y="34" width="240" height="109"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="edY-LY-Rhi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="3Ve-Hg-5nY"/>
+                            <constraint firstItem="CHJ-0Q-w6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="7D3-E6-hcM"/>
+                            <constraint firstItem="edY-LY-Rhi" firstAttribute="centerX" secondItem="CHJ-0Q-w6d" secondAttribute="centerX" id="GSO-E0-6XV"/>
+                            <constraint firstItem="OyB-3X-fOJ" firstAttribute="baseline" secondItem="ial-G8-JMH" secondAttribute="baseline" id="Xl8-j0-IHC"/>
+                            <constraint firstItem="edY-LY-Rhi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YgT-AT-G6i"/>
+                            <constraint firstItem="CHJ-0Q-w6d" firstAttribute="trailing" secondItem="1e7-UX-UQe" secondAttribute="trailing" id="dEj-UL-3CC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OyB-3X-fOJ" secondAttribute="bottom" constant="395" id="h7b-fK-i90"/>
+                            <constraint firstItem="1e7-UX-UQe" firstAttribute="top" secondItem="CHJ-0Q-w6d" secondAttribute="bottom" constant="34" id="i1e-JJ-Bjm"/>
+                            <constraint firstItem="OyB-3X-fOJ" firstAttribute="top" secondItem="1e7-UX-UQe" secondAttribute="bottom" constant="37" id="iqN-Iz-EQa"/>
+                            <constraint firstItem="edY-LY-Rhi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ju0-vY-Hff"/>
+                            <constraint firstItem="CHJ-0Q-w6d" firstAttribute="top" secondItem="edY-LY-Rhi" secondAttribute="bottom" constant="29" id="nRc-DM-i19"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ial-G8-JMH" secondAttribute="trailing" constant="81" id="pJf-Dg-xJ8"/>
+                            <constraint firstItem="CHJ-0Q-w6d" firstAttribute="leading" secondItem="1e7-UX-UQe" secondAttribute="leading" id="qrf-iK-oG9"/>
+                            <constraint firstItem="OyB-3X-fOJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="uTp-pT-ow7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UHa-0s-Hdt"/>
+                    <connections>
+                        <outlet property="eMailText" destination="CHJ-0Q-w6d" id="hRm-uk-2gp"/>
+                        <outlet property="passwordText" destination="1e7-UX-UQe" id="qjI-GU-8GS"/>
+                        <segue destination="Qki-ge-ZFr" kind="presentation" identifier="toMap" modalPresentationStyle="fullScreen" id="WNe-gA-482"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2357.971014492754" y="-26.086956521739133"/>
+        </scene>
+        <!--Profil-->
+        <scene sceneID="8kQ-NU-eDa">
+            <objects>
+                <viewController id="CEl-kX-v9e" customClass="ProfilViewController" customModule="ePark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="alo-Gb-rLh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RKh-cZ-Aa1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profil" image="person" catalog="system" id="wzC-dg-OuJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DQ-JP-hfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="344"/>
+        </scene>
+        <!--Ayarlar-->
+        <scene sceneID="Wiz-ms-BHk">
+            <objects>
+                <viewController id="G9t-Dg-Zon" customClass="SettingsViewController" customModule="ePark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fI6-EV-vKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-uw-O1S">
+                                <rect key="frame" x="173" y="600" width="68" height="42"/>
+                                <state key="normal" title="Çıkış"/>
+                                <connections>
+                                    <action selector="signOutClicked:" destination="G9t-Dg-Zon" eventType="touchUpInside" id="Q6j-vx-iBx"/>
+                                    <action selector="signOutClicked:" destination="d4h-oT-KE5" eventType="touchUpInside" id="S3a-i4-0LC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OWk-Dx-V7X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lfn-uw-O1S" firstAttribute="centerX" secondItem="fI6-EV-vKH" secondAttribute="centerX" id="2tJ-5Q-gHy"/>
+                            <constraint firstItem="lfn-uw-O1S" firstAttribute="leading" secondItem="OWk-Dx-V7X" secondAttribute="leading" constant="173" id="bSJ-7T-ZPa"/>
+                            <constraint firstItem="OWk-Dx-V7X" firstAttribute="bottom" secondItem="lfn-uw-O1S" secondAttribute="bottom" constant="45" id="fkJ-L2-ubZ"/>
+                            <constraint firstItem="lfn-uw-O1S" firstAttribute="top" secondItem="OWk-Dx-V7X" secondAttribute="top" constant="600" id="nsa-si-jqb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="wrench.and.screwdriver" catalog="system" id="hJk-mp-gep"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toVC" modalPresentationStyle="fullScreen" id="qcH-pN-7A8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1YP-ZJ-PyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="d4h-oT-KE5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1155.072463768116" y="764.67391304347836"/>
+        </scene>
+        <!--Harita-->
+        <scene sceneID="09a-uz-cvk">
+            <objects>
+                <viewController id="EWm-cS-9fi" customClass="MapViewController" customModule="ePark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBi-MF-SY7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yXX-qZ-Tmh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Harita" image="mappin.and.ellipse" catalog="system" id="8Vl-cL-msa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EnP-MM-8YQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="-329"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bS2-ET-sRM">
+            <objects>
+                <tabBarController id="Qki-ge-ZFr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ibw-wH-wQc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kt-QS-fQq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EWm-cS-9fi" kind="relationship" relationship="viewControllers" id="sJu-lJ-9ei"/>
+                        <segue destination="CEl-kX-v9e" kind="relationship" relationship="viewControllers" id="dbt-oI-E05"/>
+                        <segue destination="G9t-Dg-Zon" kind="relationship" relationship="viewControllers" id="5D3-56-EvF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfE-cK-qWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="-26"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="wrench.and.screwdriver" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
