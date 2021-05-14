@@ -18,10 +18,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+       
+        
     }
 
     @IBAction func signInClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toMap", sender: nil)
+        
+        if eMailText.text != "" && passwordText.text != "" {
+            
+            Auth.auth().signIn(withEmail: eMailText.text!, password: passwordText.text!) { (authdata, error) in
+                if error != nil {
+                    
+                    self.makeAlert(titleIn: "HATA!!", messageIn: error?.localizedDescription ?? "eMail ve şifre boş olamaz!!")
+                    
+                }else{
+                    
+                    self.performSegue(withIdentifier: "toMap", sender: nil)
+                    
+                }
+            }
+            
+        }else{
+            
+            makeAlert(titleIn: "HATA!!", messageIn: "eMail ve şifre boş olamaz!!")
+            
+        }
+        
+        
+        
     }
     
     
