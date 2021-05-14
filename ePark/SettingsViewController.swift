@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
         do{
             
             try Auth.auth().signOut()
-            self.performSegue(withIdentifier: "toVc", sender: nil)
+            self.performSegue(withIdentifier: "toVC", sender: nil)
             
         }catch{
             
