@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7203BC132660125A00EF474D /* IoTObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203BC122660125A00EF474D /* IoTObj.swift */; };
-		7203BC162660128F00EF474D /* FuncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203BC152660128F00EF474D /* FuncController.swift */; };
 		72A07256264C10D900A51A7A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A07255264C10D900A51A7A /* MapViewController.swift */; };
 		72A07259264C10FA00A51A7A /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A07258264C10FA00A51A7A /* ProfilViewController.swift */; };
 		72A0725C264C110D00A51A7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0725B264C110D00A51A7A /* SettingsViewController.swift */; };
@@ -26,7 +25,6 @@
 		456F3D9B56D38F6F13278620 /* Pods-ePark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ePark.release.xcconfig"; path = "Target Support Files/Pods-ePark/Pods-ePark.release.xcconfig"; sourceTree = "<group>"; };
 		4EF55A7A39A17191499CE411 /* Pods_ePark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ePark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7203BC122660125A00EF474D /* IoTObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoTObj.swift; sourceTree = "<group>"; };
-		7203BC152660128F00EF474D /* FuncController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncController.swift; sourceTree = "<group>"; };
 		72A07255264C10D900A51A7A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		72A07258264C10FA00A51A7A /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		72A0725B264C110D00A51A7A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				72A07255264C10D900A51A7A /* MapViewController.swift */,
 				72A07258264C10FA00A51A7A /* ProfilViewController.swift */,
 				7203BC122660125A00EF474D /* IoTObj.swift */,
-				7203BC152660128F00EF474D /* FuncController.swift */,
 				72A0725B264C110D00A51A7A /* SettingsViewController.swift */,
 				72D34D13264BC3EE00071B7C /* Main.storyboard */,
 				72D34D16264BC3EF00071B7C /* Assets.xcassets */,
@@ -231,7 +228,6 @@
 				72D34D10264BC3EE00071B7C /* SceneDelegate.swift in Sources */,
 				72A07256264C10D900A51A7A /* MapViewController.swift in Sources */,
 				72A0725C264C110D00A51A7A /* SettingsViewController.swift in Sources */,
-				7203BC162660128F00EF474D /* FuncController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

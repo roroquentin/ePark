@@ -13,7 +13,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     @IBOutlet weak var mapView: MKMapView!
     
-    var dtnValue: String = ""
+    var dtnValue : String = ""
     
     var locationManager = CLLocationManager()
     
@@ -24,7 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkDtn = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(verificarDtn), userInfo: nil, repeats: true)
+        checkDtn = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(verificarDtn), userInfo: nil, repeats: true)
         
         mapView.delegate = self
         
@@ -36,6 +36,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Do any additional setup after loading the view.
         
         addCostumPin()
+        
+        
+    }
+    
+    @objc func verificarDtn() {
+        
+        do{
+            
+            let content = try String(contentsOf: URL(string: obj.url_get_dtn_value)!, encoding: String.Encoding.utf8)
+            
+            dtnValue = String(content)
+            print(dtnValue)
+            
+        } catch {
+            
+            print("JSON serialization failed: \(error)")
+            
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -48,14 +66,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-     @objc func  addCostumPin() {
+     private func  addCostumPin() {
         
         let pinPark = MKPointAnnotation()
         let pinLoc = CLLocationCoordinate2D(latitude: 41.137439, longitude: 29.094000)
         pinPark.coordinate = pinLoc
         pinPark.title = "Park alanı"
         mapView.addAnnotation(pinPark)
-        
         
     }
     
@@ -71,7 +88,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "costum")
             annotationView?.canShowCallout = true
             //annotationView?.tintColor = UIColor.blue
-            annotationView?.image = UIImage(named: "pi")
+            
+            if Int(dtnValue) ?? 0 <= 50{
+                annotationView?.image = UIImage(named: "pi")
+            }else{
+                annotationView?.image = UIImage(named: "Po")
+            }
+            
             
            let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
            annotationView?.rightCalloutAccessoryView = button
