@@ -4,9 +4,9 @@
 long duration;
 int distance;
 
-String apiKey = "ZHCG69HTKTGD8WZT";
+String apiKey = "";
 const char* ssid = "DSH";
-const char* password = "Wohngemeinschaft";
+const char* password = "";
 const char* server = "api.thingspeak.com";
 
 void setup() {
